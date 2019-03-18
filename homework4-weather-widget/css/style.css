@@ -2,11 +2,7 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.card{
-  height: 510px;
-  width:555px;
 
-}
 
 .nightSnowy{
   background-color: #46699E;
@@ -22,45 +18,47 @@
 
 }
 
-.cardFooterSize{
-  height:140px;
 
-}
 
 .city{
-  font-size:18px;
+  font-size:1.125em;
   font-weight:900;
 }
 
 .cityName{
-  font-size: 36px;
+  font-size: 2.125em;
   font-weight: 600;
 }
 
-.day-night, .time{
-  font-size: 23px;
+.dayTime{
+  font-size: 1.25em;
   font-weight: 600;
 }
 
 .temperature{
   font-weight: 700;
-  font-size: 112px;
+  font-size: 6.75em;
 }
 
 .windSpeed{
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 .iconSizeBig{
-  font-size:45px;
-  font-size:100px;
+  
+  font-size:6.125em;
 }
 
 .dayInfo{
-  font-size:22px;
+  font-size:1em;
 }
 
 .bottomWeather{
-  font-size: 40px;
+  font-size: 1.562em;
   
 }
+
+.bottomBox{
+  width:33.33%;
+}
+
