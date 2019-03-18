@@ -1,7 +1,66 @@
-.card-title{
-  width:50px;
-  height: 50px;
-  background-color:lightblue;
-  color:red;
+.container{
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
+.card{
+  height: 510px;
+  width:555px;
+
+}
+
+.nightSnowy{
+  background-color: #46699E;
+
+}
+
+.sunny{
+  background-color: #ffa40b;
+}
+
+.cloudlySun{
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #808080), color-stop(69%, #d0e2ed), color-stop(100%, #ffa40b)); /* safari4+,chrome */
+
+}
+
+.cardFooterSize{
+  height:140px;
+
+}
+
+.city{
+  font-size:18px;
+  font-weight:900;
+}
+
+.cityName{
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.day-night, .time{
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.temperature{
+  font-weight: 700;
+  font-size: 112px;
+}
+
+.windSpeed{
+  font-size: 20px;
+}
+
+.iconSizeBig{
+  font-size:45px;
+  font-size:100px;
+}
+
+.dayInfo{
+  font-size:22px;
+}
+
+.bottomWeather{
+  font-size: 40px;
+  
+}
