@@ -1,0 +1,172 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.staticBottom {
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  bottom: 13px;
+  right: 13px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 27em;
+  height: 2.5em;
+  background-color: #fff;
+  color: #484848;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 2.6em;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px;
+  z-index: 2;
+}
+
+.staticBottom svg {
+  height: 15px;
+  width: 15px;
+  display: block;
+  fill: #484848;
+}
+
+body a {
+  text-decoration: none !important;
+  
+}
+.container-fluid {
+  background: url(https://i.hizliresim.com/mMR994.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headerMain {
+  height: 5em;
+}
+
+.headerLeft,
+.headerRight {
+  padding: 0;
+}
+
+@media (max-width: 1350px) {
+  .headerRight {
+    visibility: hidden;
+   }
+}
+
+.headerRight a {
+  height: 5em;
+  text-decoration: none;
+}
+
+.headerRight a div {
+  border-bottom: 0.125em solid transparent;
+  font-size: 15px;
+}
+
+.headerRight a div:hover {
+  border-bottom: 0.125em solid white;
+}
+
+
+
+.airbnbLogo {
+  height: 2.125em;
+  width: 2.125em;
+  margin: 1.4em;
+}
+
+.airbnbLogo svg {
+  fill: white;
+}
+
+.blankHeader {
+  height: 100%;
+  width: 100%;
+}
+
+.reservationCard {
+  margin: 2em;
+  width: 27.5em;
+  height: 30em;
+  /* background-color: red ; */
+}
+
+.card {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.cardTitle {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cardHeaderTitle {
+  font-size: 2em;
+  font-weight: bold;
+  color: #484848;
+}
+
+.textDecorationNone {
+  text-decoration: none !important;
+}
+
+.exploreHeader {
+  color: #484848;
+  font-size: 1.5em;
+  font-weight: 800;
+  height: 30px;
+  letter-spacing: normal;
+  line-height: 30px;
+  margin-top: 1em;
+}
+
+.miniCardImg {
+  width: 6em;
+  height: 4.5em;
+}
+
+.miniCardText {
+  width: 7em;
+  padding-left: 1em;
+  color: #484848
+}
+
+.airbnbPlusText {
+  font-size: 12px;
+  font-weight: 800;
+  color: #484848;
+}
+
+.cardBorderNone {
+  border: none;
+  box-shadow:none;
+}
+
+.rightArrowHover{
+  display:none;
+}
+
+
+.hoverParentdiv div:hover .rightArrowHover {
+  display:block;
+}
+
+.rateCounter{
+  font-size:12px;
+  color:#008489;
+  font-weight:bold
+  
+}
+
+.ShowExperiences{
+color:#008489 !important;
+
+}
+

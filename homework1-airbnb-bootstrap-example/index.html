@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>AirBNB</title>
+  </head>
+
+  <body>
+
+      <a href="#" class="staticBottom">
+          <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
+              <path d="m11 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-.95-1.07-.14-.21a6.54 6.54 0 0 1 -.29-.5 12.85 12.85 0 0 1 -.66-1.47c-.09-.25-.17-.5-.25-.76h4.57c-.08.26-.16.51-.25.76a12.85 12.85 0 0 1 -.66 1.47 6.54 6.54 0 0 1 -.29.5l-.14.21c-.31.04-.63.07-.95.07s-.64-.03-.95-.07zm-2.03-6.93h5.95a14.71 14.71 0 0 1 -.41 3h-5.13a14.71 14.71 0 0 1 -.41-3zm .47-4h5.01c.27.88.43 1.88.47 3h-5.95c.04-1.12.2-2.12.47-3zm4.8 10.61a13.85 13.85 0 0 0 1.04-2.61h2.4a7.01 7.01 0 0 1 -3.44 2.61zm4.02-3.61h-2.73c.22-.96.35-1.96.38-3h3.02a6.96 6.96 0 0 1 -.68 3zm-2.34-4a12.86 12.86 0 0 0 -.44-3h2.2a6.95 6.95 0 0 1 1.18 3zm .92-4h-1.68c-.08-.22-.16-.45-.26-.65a8.38 8.38 0 0 0 -.49-.9 7 7 0 0 1 2.43 1.55zm-4.04-1.94.3.3c.05.04.14.15.26.32a6.8 6.8 0 0 1 .64 1.1c.03.07.06.15.09.23h-4.28c.03-.07.06-.15.09-.23a6.78 6.78 0 0 1 .64-1.1c.13-.17.22-.28.26-.32l.3-.3a7.04 7.04 0 0 1 .85-.06c.29 0 .57.02.85.06zm-3.31.4c-.16.25-.32.54-.49.9-.1.21-.17.43-.26.65h-1.68a7 7 0 0 1 2.43-1.55zm-3.28 2.55h2.2c-.25.9-.4 1.9-.44 3h-2.94a6.95 6.95 0 0 1 1.18-3zm1.76 4c .03 1.04.17 2.04.38 3h-2.73a6.96 6.96 0 0 1 -.68-3zm-1.02 4h1.66a13.85 13.85 0 0 0 1.04 2.61 7.01 7.01 0 0 1 -3.44-2.61zm6 5.95v3.05h3.5a.5.5 0 1 1 0 1h-7.93a.5.5 0 0 1 0-1h3.43v-3c-2.12 0-4.15-.66-5.89-1.89a.5.5 0 0 1 .58-.82c1.58 1.11 3.4 1.71 5.31 1.71a9 9 0 0 0 9-9c0-3.34-1.83-6.38-4.75-8.07a.5.5 0 0 1 .5-.86c3.22 1.87 5.25 5.23 5.25 8.93 0 5.19-3.95 9.45-9 9.95z" fill-rule="evenodd"></path>
+          </svg>
+          Şartlar, Mahremiyet, Para Birimi ve Daha Fazlası</a>
+
+    <!-- container-fluid start -->
+
+    <div class="container-fluid backgroundMain">
+      <div class="row headerMain">
+        <div class="col-md-5  headerLeft">
+          <div class="airbnbLogo">
+            <a href="#">
+              <svg
+                viewBox="0 0 1000 1000"
+                role="presentation"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-7 headerRight">
+          <nav class="nav d-flex justify-content-around align-items-center">
+            <a class="text-white" href="#">
+              <div
+                class="d-flex justify-content-center align-items-center h-100 mx-2 px-2"
+              >
+                Bir evde ev sahipliği yapma
+              </div>
+            </a>
+            <a class="text-white" href="#">
+              <div
+                class="d-flex justify-content-center align-items-center h-100 mx-2 px-2"
+              >
+                Bir deneyim için ev sahipliği yapın
+              </div>
+            </a>
+            <a class="text-white" href="#">
+              <div
+                class="d-flex justify-content-center align-items-center h-100 mx-2 px-2"
+              >
+                Yardım
+              </div>
+            </a>
+            <a class="text-white" href="#">
+              <div
+                class="d-flex justify-content-center align-items-center h-100 mx-2 px-2"
+              >
+                Kaydol
+              </div>
+            </a>
+            <a class="text-white" href="#">
+              <div
+                class="d-flex justify-content-center align-items-center h-100 mx-2 px-2"
+              >
+                Giriş Yapın
+              </div>
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 "></div>
+        <div class="col-lg-4 col-md-6 col-sm-9 reservationCard">
+          <div class="card">
+            <h5 class="card-title my-0 p-4 cardHeaderTitle">
+              Benzersiz evleri ve deneyimleri rezerve edin.
+            </h5>
+            <div class="card-body">
+              <div class="card-title cardTitle">NEREDE</div>
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Her yerde"
+                aria-label="Search"
+              />
+              <form class="my-3">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card-title cardTitle">GİRİŞ</div>
+                    <input class="form-control"  type="date" />
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-title cardTitle">ÇIKIŞ</div>
+                    <input class="form-control" type="date" />
+                  </div>
+                </div>
+              </form>
+
+              <div class="form-group">
+                <label class="cardTitle" for="exampleFormControlSelect1"
+                  >MİSAFİRLER</label
+                >
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+
+              <a
+                href="#"
+                class=" text-white d-flex justify-content-end textDecorationNone"
+              >
+                <div class="btn btn-lg btn-primary bg-danger ">Arama</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-1"></div>
+        <div class="col-lg-1 col-md-1 col-sm-1"></div>
+      </div>
+    </div>
+    <!-- container-fluidend -->
+
+
+<!-- container start -->
+    <div class="container my-5">
+    
+
+    <!-- ////////////////////////////////////////////// -->
+
+    
+      <div class="exploreContainer">
+        <div class="exploreHeader">Airbnb'yi Keşfedin</div>
+        <div class="row py-3">
+          <div class="col-lg-4 col-md-12 my-4">
+           <a href="#">
+             <div  style="height:4.6rem;" class="card d-flex flex-row shadow-none" >
+      <img style="width: 6rem;"  class="card-img rounded-0" src="https://i.hizliresim.com/JZld5q.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title text-dark">Evler</h5>
+      </div>
+    </div>
+            </a>
+         </div>
+          <div class="col-lg-4 col-md-12 my-4">
+           <a href="">
+             <div  style="height:4.6rem;" class="card d-flex flex-row shadow-none" >
+      <img style="width: 6rem;"  class="card-img rounded-0" src="https://i.hizliresim.com/WqQWlq.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title text-dark">Deneyimler</h5>
+      </div>
+    </div>
+            </a>
+         </div>
+          <div class="col-lg-4 col-md-12 my-4">
+           <a href="#">
+             <div  style="height:4.6rem;" class="card d-flex flex-row shadow-none" >
+      <img style="width: 6rem;"  class="card-img rounded-0" src="https://i.hizliresim.com/jgWzEG.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title text-dark">Restoranlar</h5>
+      </div>
+    </div>
+            </a>
+         </div>
+         </div>
+      </div>
+
+      <!-- ///////////////////////////////// -->
+
+      <div class="card cardBorderNone">
+        <div class="card-body pl-0">
+          <h5 class="card-title exploreHeader">Karşınızda Airbnb Plus</h5>
+          <p class="card-text">
+            Kalite ve konfor açısından onaylanmış evlerden oluşan yeni bir
+            koleksiyon
+          </p>
+        </div>
+        <div class="card cardBorderNone">
+          <img
+            src="https://i.hizliresim.com/V9z3PV.jpg"
+            class="img-fluid card-img "
+            alt="..."
+          />
+          <div
+            class="card-img-overlay d-flex flex-column justify-content-around align-items-center"
+          >
+            <div class="card-text">
+              <svg
+                viewBox="0 0 470 239"
+                fill="#484848"
+                height="96px"
+                aria-label="Airbnb Plus branding"
+                focusable="false"
+                width="188.7866108786611px"
+              >
+                <path
+                  d="M104.707 148.464c-.512-1.438-1.109-2.83-1.677-4.118a386.734 386.734 0 0 0-2.678-5.889l-.07-.152a1318.773 1318.773 0 0 0-25.22-51.674l-.374-.728c-.9-1.75-1.832-3.56-2.787-5.337-1.116-2.076-2.352-4.275-4.1-6.322-3.766-4.412-8.966-6.842-14.645-6.842s-10.88 2.431-14.648 6.845c-1.746 2.048-2.981 4.245-4.098 6.321a341.749 341.749 0 0 0-2.812 5.387l-.348.676a1319.873 1319.873 0 0 0-25.22 51.673l-.114.25a388.09 388.09 0 0 0-2.632 5.791c-.569 1.288-1.166 2.678-1.678 4.12-1.497 4.213-1.941 8.24-1.359 12.308 1.219 8.513 6.924 15.809 14.89 19.041a24.699 24.699 0 0 0 9.335 1.81c.995 0 2.007-.06 3.007-.176 3.833-.445 7.695-1.75 11.48-3.88 4.629-2.606 9.202-6.425 14.197-11.883 4.996 5.458 9.569 9.277 14.199 11.883 3.784 2.13 7.646 3.435 11.478 3.88 1 .116 2.013.175 3.008.175a24.69 24.69 0 0 0 9.334-1.809c7.965-3.231 13.671-10.528 14.891-19.041.582-4.067.137-8.093-1.36-12.31zm-51.55 6.352c-6.213-7.89-10.2-15.216-11.599-21.358-.587-2.578-.721-4.947-.398-7.041.278-1.812.9-3.431 1.848-4.815 2.145-3.127 5.938-4.994 10.15-4.994 4.209 0 8.002 1.867 10.147 4.996.949 1.383 1.57 3.003 1.849 4.815.322 2.097.187 4.466-.4 7.044-1.401 6.141-5.387 13.465-11.598 21.353zm45.897 5.35a17.098 17.098 0 0 1-10.46 13.375c-2.745 1.114-5.746 1.506-8.796 1.153-2.919-.34-5.792-1.322-8.783-3.005-4.14-2.33-8.331-5.908-13.048-11.157 7.508-9.275 12.197-17.824 13.933-25.439.794-3.481.962-6.774.5-9.788-.448-2.908-1.474-5.548-3.05-7.846-3.511-5.123-9.565-8.182-16.195-8.182-6.627 0-12.68 3.058-16.192 8.18-1.576 2.298-2.601 4.938-3.048 7.845-.464 3.01-.297 6.302.496 9.784 1.735 7.618 6.424 16.169 13.934 25.447-4.716 5.248-8.907 8.825-13.048 11.156-2.99 1.683-5.863 2.666-8.782 3.005-3.049.353-6.052-.039-8.797-1.153a17.095 17.095 0 0 1-10.46-13.376c-.418-2.923-.095-5.742 1.018-8.872.41-1.154.889-2.286 1.483-3.632.84-1.903 1.732-3.838 2.595-5.709l.116-.251a1318.605 1318.605 0 0 1 25.196-51.625l.35-.682a336.93 336.93 0 0 1 2.765-5.295c.972-1.808 1.95-3.555 3.236-5.063 2.403-2.815 5.563-4.303 9.14-4.303 3.575 0 6.734 1.487 9.137 4.302 1.287 1.508 2.265 3.255 3.236 5.061a333.39 333.39 0 0 1 2.74 5.247l.377.734a1317.39 1317.39 0 0 1 25.196 51.625l.071.155a379.704 379.704 0 0 1 2.64 5.805c.595 1.347 1.075 2.48 1.484 3.63 1.111 3.132 1.434 5.951 1.016 8.873zm194.117-43.622c0-33.068 4.234-63.313 11.695-83.88 5.04-14.316 11.492-25.002 19.961-25.002 7.46 0 11.694 8.67 11.694 22.583 0 17.744-6.049 38.713-15.928 59.482-7.26 15.323-16.736 30.244-27.02 43.754-.2-5.242-.402-10.888-.402-16.937zm-43.352 65.732c12.704-7.057 25.608-17.946 37.504-31.252 3.63 22.985 11.292 30.446 20.365 30.446 10.082 0 19.76-9.276 28.229-26.01v3.225c0 17.34 7.863 22.785 14.92 22.785 10.485 0 20.769-11.695 29.036-30.85-.202 3.428-.202 5.04-.202 7.259 0 17.542 6.452 22.784 13.912 22.784 6.856 0 12.502-4.84 18.55-14.921 1.412-2.419-.402-5.646-3.225-5.646-1.412 0-2.823.807-3.428 2.017-3.63 6.452-7.057 10.888-11.291 10.888-5.848 0-6.452-8.47-6.452-15.122 0-9.679 1.225-25.472 3.024-34.883.48-2.515-1.412-4.637-3.831-4.637-2.017 0-3.63 1.41-4.033 3.024-7.662 27.826-19.558 52.425-30.85 52.425-5.645 0-8.065-6.654-8.065-15.324 0-9.88 2.017-21.777 5.645-35.085.606-2.42-1.209-4.839-3.83-4.839-1.613 0-3.428 1.009-3.832 2.621-9.072 30.245-21.776 52.627-33.269 52.627-8.267 0-12.5-11.292-14.315-29.237 13.105-15.526 24.8-33.471 33.47-51.619 10.284-21.977 16.736-44.157 16.736-62.707C344.587 6.654 334.505 0 325.23 0c-10.888 0-20.97 10.283-28.027 29.842-7.46 21.373-12.098 52.424-12.098 86.702 0 9.275.404 17.34 1.008 24.397-12.5 14.316-26.212 26.616-39.923 34.48-1.814 1.008-2.62 3.428-1.613 5.242 1.008 1.815 3.427 2.621 5.242 1.613zm-68.353 56.054c2.218 0 4.235-1.815 4.235-4.033 0-17.743.806-35.487 2.62-52.827 36.698-3.226 78.839-38.31 78.839-74.806 0-25.204-18.147-39.52-42.141-39.52-23.39 0-53.03 14.719-77.63 39.117-1.612 1.41-1.612 4.032 0 5.645 1.413 1.613 4.034 1.613 5.647 0 22.986-22.38 50.207-36.697 71.781-36.697 19.357 0 33.874 11.493 33.874 31.455 0 32.26-36.899 63.11-69.563 66.539 3.024-25.608 7.864-50.408 14.518-72.185.604-2.016-.807-4.436-2.823-5.042-2.218-.603-4.637.606-5.243 2.622-6.654 22.583-11.694 48.19-14.921 75.008-7.863-.403-14.719-2.42-22.38-6.855-2.017-1.009-4.436-.202-5.647 1.613-1.008 2.016-.2 4.436 1.614 5.645 9.073 4.637 16.937 7.057 25.607 7.662-1.613 17.34-2.622 35.084-2.622 52.626 0 2.218 2.017 4.033 4.235 4.033zm274.22-110.697c1.614 1.21 4.235 1.008 5.444-.604 5.444-6.855 8.671-14.115 8.671-20.365 0-9.275-6.251-15.122-17.743-15.122-22.18 0-43.554 22.582-43.554 39.923 0 11.09 7.662 18.55 22.987 21.373l9.476 1.613c9.88 1.613 16.534 5.04 16.534 11.896 0 7.461-8.267 11.493-16.937 11.493-6.452 0-12.099-2.218-16.534-5.242-1.613-1.21-4.032-.807-5.242.806s-.807 4.033.806 5.242c5.646 4.235 12.905 6.856 20.97 6.856 14.315 0 25.003-8.065 25.003-19.558 0-9.275-7.058-16.333-23.39-19.155l-9.477-1.614c-9.678-1.613-16.13-5.846-16.13-13.912 0-13.913 17.744-32.06 35.285-32.06 6.05 0 9.88 2.622 9.88 8.066 0 4.234-2.42 9.679-6.653 14.92-1.21 1.614-1.009 4.033.604 5.444z"
+                ></path>
+              </svg>
+            </div>
+            <button class="btn btn-lg btn-light text-center airbnbPlusText">
+              EVLERİ KEŞFE ÇIKIN
+              <svg
+                viewBox="0 0 16 16"
+                role="presentation"
+                aria-hidden="true"
+                focusable="false"
+                style="height: 10px; width: 10px; margin-left:5px; margin-bottom:2.5px; fill: currentcolor;"
+              >
+                <path
+                  d="m5.3 16c .3 0 .6-.1.8-.4l6.8-6.7c.5-.5.5-1.3 0-1.8l-6.8-6.7c-.5-.5-1.2-.5-1.7 0s-.5 1.2 0 1.7l5.8 5.9-5.8 5.9c-.5.5-.5 1.2 0 1.7.2.3.5.4.9.4"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="recommended">
+        <div class="exploreHeader">Sizin için önerilenler</div>
+        <div
+          class="row py-3 d-flex flex-row justify-content-around align-items-center"
+        >
+          <div class="col-lg-3 col-md-6 mb-3">
+            <a href="#">
+              <div class="card cardBorderNone ">
+                <img
+                  src="https://i.hizliresim.com/mMNM24.jpg"
+                  class="card-img"
+                  alt="..."
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-items-center"
+                >
+                  <p class="text-white mb-0"><strong>Paris</strong></p>
+                  <p class="text-white text-center">553 ₺/gece ortalaması</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <a href="#">
+              <div class="card cardBorderNone">
+                <img
+                  src="https://i.hizliresim.com/16Z6E5.jpg"
+                  class="card-img"
+                  alt="..."
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-items-center"
+                >
+                  <p class="text-white mb-0"><strong>Tokyo</strong></p>
+                  <p class="text-white text-center">448 ₺/gece ortalaması</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <a href="#">
+              <div class="card cardBorderNone">
+                <img
+                  src="https://i.hizliresim.com/4jVjjq.jpg"
+                  class="card-img"
+                  alt="..."
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-items-center"
+                >
+                  <p class="text-white mb-0"><strong>Londra</strong></p>
+                  <p class="text-white text-center">605 ₺/gece ortalaması</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <a href="#">
+              <div class="card cardBorderNone">
+                <img
+                  src="https://i.hizliresim.com/lqNqZQ.jpg"
+                  class="card-img"
+                  alt="..."
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-items-center"
+                >
+                  <p class="text-white mb-0"><strong>Los Angeles</strong></p>
+                  <p class="text-white text-center">660 ₺/gece ortalaması</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- <div class="col">
+            <a href="#">
+              <div class="card cardBorderNone">
+                <img
+                  src="https://i.hizliresim.com/EmAmmB.jpg"
+                  class="card-img"
+                  alt="..."
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-items-center"
+                >
+                  <p class="text-white mb-0"><strong>Barcelona</strong></p>
+                  <p class="text-white text-center">450 ₺/gece ortalaması</p>
+                </div>
+              </div>
+            </a>
+          </div> -->
+        </div>
+      </div>
+
+
+
+<!-- //////////////////////////////////////////////////// -->
+
+
+
+
+      <div class="topRatedExperince">
+        <div class="card cardBorderNone ">
+          <div class="card-body pl-0">
+            <div
+              class="row d-flex flex-row justify-content-start hoverParentdiv"
+            >
+              <div class="col-lg-5">
+                <h5 class="card-title exploreHeader">
+                  En çok beğenilen deneyimler
+                </h5>
+                <p class="card-text">
+                  Bir sonraki seyahatinizde yerel ev sahiplerince
+                  gerçekleştirilen aktiviteler rezerve edin.
+                </p>
+              </div>
+              <div
+                class="col-lg-1 d-flex justify-content-center align-items-center rightArrowHover"
+              >
+                <svg
+                  viewBox="0 0 18 18"
+                  role="presentation"
+                  aria-hidden="true"
+                  focusable="false"
+                  style="height: 1em; width: 1em; display: block; fill: currentcolor;"
+                >
+                  <path
+                    d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 mb-5">
+              <div class="card cardBorderNone" style="width: 16rem;">
+                <img
+                  class="card-img-top"
+                  src="https://a0.muscache.com/im/pictures/910de248-2375-432d-a219-2d6a770efddb.jpg?aki_policy=large"
+                  alt="Card image cap"
+                />
+                <div class="card-body py-1 px-0">
+                  <h6
+                    style="font-size:.75rem;"
+                    class="card-text text-muted my-1 "
+                  >
+                    FOTOĞRAF YÜRÜYÜŞÜ · THİRA
+                  </h6>
+                  <h6 class="card-title my-1">Santorini Photo Shoot</h6>
+                  <p style="font-size:.90rem;" class="card-text my-1">
+                    Kişi başına 741 ₺
+                  </p>
+
+                  <div
+                    class="d-flex flex-row justif-content-center text-aligment-center"
+                  >
+                    <div class="rateCounter">
+                      4.97
+                    </div>
+                    <div
+                      class="d-flex justif-content-center align-items-center"
+                    >
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="rateCounter text-muted">
+                      (58)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+              <div class="card cardBorderNone" style="width: 16rem;">
+                <img
+                  class="card-img-top"
+                  src="https://a0.muscache.com/im/pictures/753aa80b-7a72-4899-a7a2-c627fdf3d3a1.jpg?aki_policy=large"
+                  alt="Card image cap"
+                />
+                <div class="card-body py-1 px-0">
+                  <h6
+                    style="font-size:.75rem;"
+                    class="card-text text-muted my-1 "
+                  >
+                    SPA ZİYARETİ · PALM SPRİNGS DESERT
+                  </h6>
+                  <h6 class="card-title my-1">Hot Spring Sunset for Two</h6>
+                  <p style="font-size:.90rem;" class="card-text my-1">
+                    Kişi başına 355 ₺
+                  </p>
+
+                  <div
+                    class="d-flex flex-row justif-content-center text-aligment-center"
+                  >
+                    <div class="rateCounter">
+                      4.96
+                    </div>
+                    <div
+                      class="d-flex justif-content-center align-items-center"
+                    >
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="rateCounter text-muted">
+                      (288)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+              <div class="card cardBorderNone" style="width: 16rem;">
+                <img
+                  class="card-img-top"
+                  src="https://a0.muscache.com/im/pictures/537913b3-f15b-40a0-a2e4-0f8be5816a5f.jpg?aki_policy=large"
+                  alt="Card image cap"
+                />
+                <div class="card-body py-1 px-0">
+                  <h6
+                    style="font-size:.75rem;"
+                    class="card-text text-muted my-1 "
+                  >
+                    YÜZME · LİMA
+                  </h6>
+                  <h6 class="card-title my-1">
+                    Nada con lobos marinos en su habitat
+                  </h6>
+                  <p style="font-size:.90rem;" class="card-text my-1">
+                    Kişi başına 254 ₺
+                  </p>
+
+                  <div
+                    class="d-flex flex-row justif-content-center text-aligment-center"
+                  >
+                    <div class="rateCounter">
+                      4.91
+                    </div>
+                    <div
+                      class="d-flex justif-content-center align-items-center"
+                    >
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="rateCounter text-muted">
+                      (159)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+              <div class="card cardBorderNone" style="width: 16rem;">
+                <img
+                  class="card-img-top"
+                  src="https://a0.muscache.com/im/pictures/a9aa17fb-b068-476c-9396-f52cccb40d2e.jpg?aki_policy=large"
+                  alt="Card image cap"
+                />
+                <div class="card-body py-1 px-0">
+                  <h6
+                    style="font-size:.75rem;"
+                    class="card-text text-muted my-1 "
+                  >
+                    TARİH YÜRÜYÜŞÜ · COSTA BLANCA
+                  </h6>
+                  <h6 class="card-title my-1">
+                    7 Secrets´ Tour including food & drink
+                  </h6>
+                  <p style="font-size:.90rem;" class="card-text my-1">
+                    Kişi başına 179 ₺
+                  </p>
+
+                  <div
+                    class="d-flex flex-row justif-content-center text-aligment-center"
+                  >
+                    <div class="rateCounter">
+                      4.91
+                    </div>
+                    <div
+                      class="d-flex justif-content-center align-items-center"
+                    >
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="rateCounter text-muted">
+                      (188)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+              <div class="card cardBorderNone" style="width: 16rem;">
+                <img
+                  class="card-img-top"
+                  src="https://a0.muscache.com/im/pictures/a7213cfc-2f25-47ad-9526-09c253a18f13.jpg?aki_policy=large"
+                  alt="Card image cap"
+                />
+                <div class="card-body py-1 px-0">
+                  <h6
+                    style="font-size:.75rem;"
+                    class="card-text text-muted my-1 "
+                  >
+                    KÜREK SÖRFÜ · ALGARVE
+                  </h6>
+                  <h6 class="card-title my-1">
+                    Sunrise SUP into Caves & Grottos
+                  </h6>
+                  <p style="font-size:.90rem;" class="card-text my-1">
+                    Kişi başına 309 ₺
+                  </p>
+
+                  <div
+                    class="d-flex flex-row justif-content-center text-aligment-center"
+                  >
+                    <div class="rateCounter">
+                      4.97
+                    </div>
+                    <div
+                      class="d-flex justif-content-center align-items-center"
+                    >
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="rateCounter text-muted">
+                      (350)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+              <div class="card cardBorderNone" style="width: 16rem;">
+                <img
+                  class="card-img-top"
+                  src="https://a0.muscache.com/im/pictures/98156e34-9501-4cbe-80bb-397679746a82.jpg?aki_policy=large"
+                  alt="Card image cap"
+                />
+                <div class="card-body py-1 px-0">
+                  <h6
+                    style="font-size:.75rem;"
+                    class="card-text text-muted my-1 "
+                  >
+                    BİSİKLETE BİNME · BRİGHTON
+                  </h6>
+                  <h6 class="card-title my-1">
+                    Ride Sussex Coastline on eMTB or MTB
+                  </h6>
+                  <p style="font-size:.90rem;" class="card-text my-1">
+                    Kişi başına 247 ₺
+                  </p>
+
+                  <div
+                    class="d-flex flex-row justif-content-center text-aligment-center"
+                  >
+                    <div class="rateCounter">
+                      4.95
+                    </div>
+                    <div
+                      class="d-flex justif-content-center align-items-center"
+                    >
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="rateCounter text-muted">
+                      (59)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+              <div class="card cardBorderNone" style="width: 16rem;">
+                <img
+                  class="card-img-top"
+                  src="https://a0.muscache.com/im/pictures/bb32a6b1-0e30-4a15-82b2-686338c87cb6.jpg?aki_policy=large"
+                  alt="Card image cap"
+                />
+                <div class="card-body py-1 px-0">
+                  <h6
+                    style="font-size:.75rem;"
+                    class="card-text text-muted my-1 "
+                  >
+                    FOTOĞRAF ÇEKİMİ · TOKYO
+                  </h6>
+                  <h6 class="card-title my-1">
+                    Your Personal Tokyo Photographer!
+                  </h6>
+                  <p style="font-size:.90rem;" class="card-text my-1">
+                    Kişi başına 469 ₺
+                  </p>
+
+                  <div
+                    class="d-flex flex-row justif-content-center text-aligment-center"
+                  >
+                    <div class="rateCounter">
+                      4.94
+                    </div>
+                    <div
+                      class="d-flex justif-content-center align-items-center"
+                    >
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="rateCounter text-muted">
+                      (297)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+              <div class="card cardBorderNone" style="width: 16rem;">
+                <img
+                  class="card-img-top"
+                  src="https://a0.muscache.com/im/pictures/2ecda75c-593c-43e9-9889-652687e2753f.jpg?aki_policy=large"
+                  alt="Card image cap"
+                />
+                <div class="card-body py-1 px-0">
+                  <h6
+                    style="font-size:.75rem;"
+                    class="card-text text-muted my-1 "
+                  >
+                    MEDİTASYON · IDYLLWİLD
+                  </h6>
+                  <h6 class="card-title my-1">
+                    Crystal Bowl Sound Bath at INDIGOTOPIA
+                  </h6>
+                  <p style="font-size:.90rem;" class="card-text my-1">
+                    Kişi başına 241 ₺
+                  </p>
+
+                  <div
+                    class="d-flex flex-row justif-content-center text-aligment-center"
+                  >
+                    <div class="rateCounter">
+                      4.94
+                    </div>
+                    <div
+                      class="d-flex justif-content-center align-items-center"
+                    >
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                      <svg
+                        viewBox="0 0 1000 1000"
+                        role="presentation"
+                        aria-hidden="true"
+                        focusable="false"
+                        style="height: 0.8em; width: 0.8em; display: block; fill:#008489;"
+                      >
+                        <path
+                          d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="rateCounter text-muted">
+                      (239)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        
+          <a href="ShowExperiences">
+            <span>Tüm deneyimleri göster</span>
+            <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style="height: 10px; width: 10px; fill: currentcolor;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
+          </a>
+        </div>
+
+<!-- ///////////////////////////////////////////////// -->
+
+      </div>
+      <div class="recommended">
+        <div class="exploreHeader">Plaja gidin</div>
+        <div
+          class="row "
+        >
+          <div class="col-lg-3 col-md-6 mb-3">
+            <a href="#">
+              <div class="card cardBorderNone ">
+                <img
+                  src="https://a0.muscache.com/im/pictures/ab1c393b-17a9-4180-bfb1-c043ad2c3e0a.jpg?aki_policy=large"
+                  class="card-img"
+                  alt="..."
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-items-center"
+                >
+                  <p class="text-white mb-0"><strong>San Diego</strong></p>
+                  <p class="text-white text-center">745 ₺/gece ortalaması</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <a href="#">
+              <div class="card cardBorderNone">
+                <img
+                  src="https://a0.muscache.com/im/pictures/2d81fac2-0df0-4129-b6a2-af760f049a76.jpg?aki_policy=large"
+                  class="card-img"
+                  alt="..."
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-items-center"
+                >
+                  <p class="text-white mb-0"><strong>Cabo San Lucas</strong></p>
+                  <p class="text-white text-center">1903 ₺/gece ortalaması</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <a href="#">
+              <div class="card cardBorderNone">
+                <img
+                  src="https://a0.muscache.com/im/pictures/c38037af-6913-4ddf-9950-48d56cdedbcf.jpg?aki_policy=large"
+                  class="card-img"
+                  alt="..."
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-items-center"
+                >
+                  <p class="text-white mb-0"><strong>Riviera Maya</strong></p>
+                  <p class="text-white text-center">1547 ₺/gece ortalaması</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <a href="#">
+              <div class="card cardBorderNone">
+                <img
+                  src="https://a0.muscache.com/im/pictures/ef121077-18d9-4949-88b3-0a6f8bb84e96.jpg?aki_policy=large"
+                  class="card-img"
+                  alt="..."
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-items-center"
+                >
+                  <p class="text-white mb-0"><strong>Puerto Vallarta</strong></p>
+                  <p class="text-white text-center">895 ₺/gece ortalaması</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          
+        </div>
+      </div>
+
+<!-- ///////////////////////////////////////////// -->
+
+
+
+
+      <div class="promExperiences my-5">
+          <div class="exploreHeader">Öne çıkan deneyimler</div>
+
+          <div class="row">
+        
+              <div class="col-lg-4"><div class="card cardBorderNone">
+                  <div class="imageContainer"><img class="card-img-top" src="https://a0.muscache.com/pictures/05c28d11-a3c5-47a2-ad6a-eb7c2bf7ce2f.jpg" alt="Card image cap"></div>
+                  <div class="card-body py-1 px-0">
+                    <h6 style="font-size:.75rem;" class="card-text text-muted my-1 ">100+ DENEYİM</h6>
+                    <h6 class="card-title my-1">Sörf Deneyimleri</h6>
+                    <p style="font-size:.90rem;" class="card-text my-1">Dünyanın her yanında profesyonel sörfçülerin ev sahipliği yaptığı Dünya Sörf Ligi deneyimleri ile dalgayı yakalayın.</p>
+                      
+                  
+                  </div>
+                </div></div>
+              <div class="col-lg-4"><div class="card cardBorderNone">
+                  <div class="imageContainer"><img class="card-img-top" src="https://a0.muscache.com/pictures/28fac713-f4df-4d91-8a05-a0470c494417.jpg" alt="Card image cap"></div>
+                  <div class="card-body py-1 px-0">
+                    <h6 style="font-size:.75rem;" class="card-text text-muted my-1 ">60+ KONSER</h6>
+                    <h6 class="card-title my-1">Karşınızda Airbnb Konserleri</h6>
+                    <p style="font-size:.90rem;" class="card-text my-1">Eşsiz mekanlarda samimi şovlar eşliğinde canlı müzik deneyimi için yeni bir yol keşfedin.</p>
+                      
+                  
+                  </div>
+                </div></div>
+              <div class="col-lg-4"><div class="card cardBorderNone">
+                  <div class="imageContainer"><img class="card-img-top" src="https://a0.muscache.com/pictures/78a3069a-1d85-4e71-a685-d8f2b669da0d.jpg" alt="Card image cap"></div>
+                  <div class="card-body py-1 px-0">
+                    <h6 style="font-size:.75rem;" class="card-text text-muted my-1 h6pExperiences ">200+ DENEYİM</h6>
+                    <h6 class="card-title my-1">Sosyal Etki Deneyimleri</h6>
+                    <p style="font-size:.90rem;" class="card-text my-1">Bir gerekçeyi desteklerken yeni bir şeyler deneyin. Ödediğinizin %100'ü kâr amacı gütmeyen kuruluşa gider.</p>
+                      
+                  
+                  </div>
+                </div></div>
+            </div>
+      </div>
+
+<!-- ////////////////////////////////////////////////////// -->
+
+
+<div class="recommended">
+    <div class="exploreHeader">Avrupa'da kısa bir şehir tatili yapın</div>
+
+    <div class="row py-3 ">
+      <div class="col-lg-3 col-md-6 mb-3">
+        <a href="#">
+          <div class="card cardBorderNone ">
+            <img
+              src="https://a0.muscache.com/im/pictures/998b4270-25d7-4850-8ccf-4350b9a5ab05.jpg?aki_policy=large"
+              class="card-img"
+              alt="..."
+            />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-end align-items-center"
+            >
+              <p class="text-white mb-0"><strong>Paris</strong></p>
+              <p class="text-white text-center">563 ₺/gece ortalaması</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-3">
+        <a href="#">
+          <div class="card cardBorderNone">
+            <img
+              src="https://a0.muscache.com/im/pictures/6729455e-af21-4dc3-bfdf-332393d407a8.jpg?aki_policy=large"
+              class="card-img"
+              alt="..."
+            />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-end align-items-center"
+            >
+              <p class="text-white mb-0"><strong>Londra</strong></p>
+              <p class="text-white text-center">618 ₺/gece ortalaması</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-3">
+        <a href="#">
+          <div class="card cardBorderNone">
+            <img
+              src="https://a0.muscache.com/im/pictures/e071ee12-98df-4673-81cc-026d9d3d6685.jpg?aki_policy=large"
+              class="card-img"
+              alt="..."
+            />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-end align-items-center"
+            >
+              <p class="text-white mb-0"><strong>Roma</strong></p>
+              <p class="text-white text-center">427 ₺/gece ortalaması</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-3">
+        <a href="#">
+          <div class="card cardBorderNone">
+            <img
+              src="https://a0.muscache.com/im/pictures/6db93b37-3d4b-49c0-af00-c184a9dd6305.jpg?aki_policy=large"
+              class="card-img"
+              alt="..."
+            />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-end align-items-center"
+            >
+              <p class="text-white mb-0"><strong>Barselona</strong></p>
+              <p class="text-white text-center">485 ₺/gece ortalaması</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div class="card cardBorderNone ">
+    <div class="card-body pl-0">
+      <h5 class="card-title exploreHeader">Gelecek seyahatiniz için benzersiz evler</h5>
+      <p class="card-text">Sıradan şeylerden sıkıldıysanız bu eşsiz yerlerden birine rezervasyon yapın</p>
+    </div>
+
+    <div class="promExperiences my-5">
+      <div class="exploreHeader">Öne çıkan deneyimler</div>
+
+      <div class="row">
+    
+          <div class="col-lg-4 col-md-12"><div class="card cardBorderNone">
+              <div class="imageContainer"><img class="card-img-top" src="https://a0.muscache.com/im/pictures/0e25bbd4-d081-4bab-85de-a8fd05245b53.jpg?aki_policy=large" alt="Card image cap"></div>
+              <div class="card-body py-1 px-0">
+                <h6 style="font-size:.75rem;" class="card-text text-muted my-1 ">1.912 AĞAÇ EV</h6>
+                <h6 class="card-title my-1">Biraz bakış açısı edinin</h6>
+                <p style="font-size:.90rem;" class="card-text my-1">Bu eşi benzeri olmayan ağaç evlerden biri sayesinde yeni seyahatinizi bambaşka seviyelere çıkarın.</p>
+                  
+              
+              </div>
+            </div></div>
+          <div class="col-lg-4 col-md-12"><div class="card cardBorderNone">
+              <div class="imageContainer"><img class="card-img-top" src="https://a0.muscache.com/im/pictures/1df93d87-26a5-4c5e-8a91-b37ccb173aa1.jpg?aki_policy=large" alt="Card image cap"></div>
+              <div class="card-body py-1 px-0">
+                <h6 style="font-size:.75rem;" class="card-text text-muted my-1 ">9.167 TEKNE</h6>
+                <h6 class="card-title my-1">Açık denizlerde yelken açın</h6>
+                <p style="font-size:.90rem;" class="card-text my-1">tüm şekik ve boyutlarda teknelere sahip olan maceraperestlerin ayak izinden gidin.</p>
+                  
+              
+              </div>
+            </div></div>
+          <div class="col-lg-4 col-md-12"><div class="card cardBorderNone">
+              <div class="imageContainer"><img class="card-img-top" src="https://a0.muscache.com/im/pictures/408ad1e8-0367-4cb7-be52-6d7bfcc9d046.jpg?aki_policy=large" alt="Card image cap"></div>
+              <div class="card-body py-1 px-0">
+                <h6 style="font-size:.75rem;" class="card-text text-muted my-1 h6pExperiences ">1.829 YURT</h6>
+                <h6 class="card-title my-1">Tarzı olan kamp için yapılmış</h6>
+                <p style="font-size:.90rem;" class="card-text my-1">İç mekan rahatlığıyla harika dış mekanları karışımını kucaklayın.</p>
+                  
+              
+              </div>
+            </div></div>
+        </div>
+  </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+.cardContainer {
+  width: 299px;
+  height: 542px;
+  border-top-left-radius: 30px !important;
+  border-top-right-radius: 30px !important;
+  overflow: hidden;
+}
+
+.cardHeaderSize {
+  height: 200px;
+}
+
+.h1 {
+  font-size: 5.5rem !important;
+}
+
+/*red*/
+.colorRed .card-header {
+  background-color: #b84e4a !important;
+}
+
+.colorRed .spanColor {
+  color: #b84e4a !important;
+}
+
+/*blue*/
+
+.colorBlue .card-header {
+  background-color: #365670 !important;
+}
+
+.colorBlue .spanColor {
+  color: #365670 !important;
+}
+
+/*green*/
+.colorGreen .card-header {
+  background-color: #4da564 !important;
+}
+
+.colorGreen .spanColor {
+  color: #4da564 !important;
+}
+
+/*orange*/
+.colorOrange .card-header {
+  background-color: #fd7e14 !important;
+}
+
+.colorOrange .spanColor {
+  color: #fd7e14 !important;
+}
+
+/*purple*/
+.colorPurple .card-header {
+  background-color: #6f42c1 !important;
+}
+
+.colorPurple .spanColor {
+  color: #6f42c1;
+}
+
+/*Indigo*/
+.colorIndigo .card-header {
+  background-color: #6610f2;
+}
+
+.colorIndigo .spanColor {
+  color: #6610f2;
+}
+
+/*Teal*/
+.colorTeal .card-header {
+  background-color: #20c997;
+}
+
+.colorTeal .spanColor {
+  color: #20c997;
+}
+
+/*cyan*/
+.colorCyan .card-header {
+  background-color: #17a2b8t;
+}
+
+.colorCyan .spanColor {
+  color: #17a2b8;
+}
+
+/*cyan*/
+.colorCyan .card-header {
+  background-color: #17a2b8;
+}
+
+.colorCyan .spanColor {
+  color: #17a2b8;
+}
+
+/*Mix*/
+.colorMix .card-header {
+  background: linear-gradient(125deg, #1a9979, #4c871c, #20295d, #2d0d2b);
+}
+.colorMix .spanColor {
+  color: #df9af4;
+}
+
+li {
+  font-weight: 600;
+}
+
+.list-group-item {
+  font-size: 1.1rem;
+}
+
+.btn {
+  background-color: #b84e4a !important;
+  padding: 14px !important;
+  border-radius: 20px !important;
+}

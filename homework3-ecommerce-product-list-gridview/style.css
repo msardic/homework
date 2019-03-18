@@ -1,0 +1,118 @@
+html{
+  font-family: sans-serif;
+}
+.slideContainer {
+  position: relative;
+  overflow: hidden;
+  width: 265px;
+  height: 350px;
+  
+}
+
+.imagePosition2{
+position:absolute;
+width: 265px;
+height: 350px;
+object-fit: cover;
+opacity:0;
+transition: all 1000ms ease;
+}
+
+.slideContainer:hover .imagePosition2 {
+  opacity:1;
+
+}
+
+.imagePosition1{
+  position:absolute;
+  width: 265px;
+  height: 350px;
+  object-fit: cover;
+}
+
+
+
+
+.slide {
+  position: absolute;
+  bottom: -45px;
+  width: 265px;
+  height: 45px;
+  background: #404040;
+  transition: 1s;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.slideContainer:hover .slide {
+  transition: 0.5s;
+  bottom: 0;
+}
+
+.slide:hover {
+  background-color: #4F96D5;
+}
+
+.btnYPosition1 {
+  position: absolute;
+  right: -40px;
+  top: 125px;
+  transition: all 500ms ease-in-out;
+}
+.btnYPosition2 {
+  position: absolute;
+  right: -40px;
+  top: 175px;
+  transition: all 500ms ease-in-out 250ms;
+}
+.btnYPosition3 {
+  position: absolute;
+  right: -40px;
+  top: 225px;
+  transition: all 500ms ease-in-out 500ms;
+}
+
+.slideContainer:hover .btnYPosition1 {
+  transform: translate(-60px);
+}
+
+.slideContainer:hover .btnYPosition2 {
+  transform: translate(-60px);
+}
+
+.slideContainer:hover .btnYPosition3 {
+  transform: translate(-60px);
+}
+
+.roundedItem {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #404040;
+}
+.roundedItem:hover {
+  background-color: #4F96D5;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.btn-light:hover {
+  background-color: 007bff !important;
+}
+
+.btn {
+  width: 45px !important;
+
+  border-radius: 50% !important;
+}
+
+.btn-outline-primary {
+  color: black;
+}
+
+.itemSpec {
+  width: 265px;
+  height: 75px;
+  font-size: 1.15em;
+}
