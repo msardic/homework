@@ -1,4 +1,4 @@
-html{
+html {
   font-family: sans-serif;
 }
 .slideContainer {
@@ -6,32 +6,27 @@ html{
   overflow: hidden;
   width: 265px;
   height: 350px;
-  
 }
 
-.imagePosition2{
-position:absolute;
-width: 265px;
-height: 350px;
-object-fit: cover;
-opacity:0;
-transition: all 1000ms ease;
+.imagePosition2 {
+  position: absolute;
+  width: 265px;
+  height: 350px;
+  object-fit: cover;
+  opacity: 0;
+  transition: all 1000ms ease;
 }
 
 .slideContainer:hover .imagePosition2 {
-  opacity:1;
-
+  opacity: 1;
 }
 
-.imagePosition1{
-  position:absolute;
+.imagePosition1 {
+  position: absolute;
   width: 265px;
   height: 350px;
   object-fit: cover;
 }
-
-
-
 
 .slide {
   position: absolute;
@@ -45,31 +40,31 @@ transition: all 1000ms ease;
 }
 
 .slideContainer:hover .slide {
-  transition: 0.5s;
+  transition: 150ms ease-in-out;
   bottom: 0;
 }
 
 .slide:hover {
-  background-color: #4F96D5;
+  background-color: #4f96d5;
 }
 
 .btnYPosition1 {
   position: absolute;
   right: -40px;
   top: 125px;
-  transition: all 500ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 .btnYPosition2 {
   position: absolute;
   right: -40px;
   top: 175px;
-  transition: all 500ms ease-in-out 250ms;
+  transition: all 150ms ease-in-out 75ms;
 }
 .btnYPosition3 {
   position: absolute;
   right: -40px;
   top: 225px;
-  transition: all 500ms ease-in-out 500ms;
+  transition: all 150ms ease-in-out 150ms;
 }
 
 .slideContainer:hover .btnYPosition1 {
@@ -92,7 +87,7 @@ transition: all 1000ms ease;
   color: #404040;
 }
 .roundedItem:hover {
-  background-color: #4F96D5;
+  background-color: #4f96d5;
   color: #fff;
   transition: 0.5s;
 }
@@ -115,4 +110,8 @@ transition: all 1000ms ease;
   width: 265px;
   height: 75px;
   font-size: 1.15em;
+}
+
+.btn:focus {
+  outline: none;
 }
