@@ -50,7 +50,8 @@
 }
 
 .dayInfo{
-  font-size:1em;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
 }
 
 .bottomWeather{
@@ -60,5 +61,7 @@
 
 .bottomBox{
   width:33.33%;
+  height:5em;
 }
+
 
