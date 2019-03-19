@@ -14,7 +14,8 @@
 }
 
 .cloudlySun{
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #808080), color-stop(69%, #d0e2ed), color-stop(100%, #ffa40b)); /* safari4+,chrome */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #808080), color-stop(69%, #d0e2ed), color-stop(100%, #ffa40b));
+  
 
 }
 
@@ -46,7 +47,7 @@
 
 .iconSizeBig{
   
-  font-size:6.125em;
+  font-size:5.7em;
 }
 
 .dayInfo{
