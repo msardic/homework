@@ -1,0 +1,113 @@
+body, html { 
+  height: 100%;
+  background: url(https://i.hizliresim.com/P1WaZO.jpg) no-repeat center center fixed; 
+  background-size: cover;
+  
+}
+
+.containerSize{
+  
+  height:360px;
+}
+
+
+.leftSide{
+  background-color: #524C5F;
+  width:50px;
+}
+
+.logoLeftSide{
+  width:3rem;
+  height:3rem;
+}
+
+.rightSide{
+  
+  width:480px;
+  
+}
+
+.card{
+  height:100%;
+  width:100%;
+}
+
+.card-img-top{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.mainLogoContainer{
+  height:135px;
+  width:100%;
+}
+
+.headerTitleSize{
+  font-size:1.1rem;
+  font-weight: bold;
+}
+
+.formText{
+font-size:0.8em;
+font-weight: bold;
+}
+
+.formText1{
+  width: 10.6rem;
+  height: 1.8rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-align: left;
+  color: #494055;
+  
+}
+
+.formSize{
+  font-size: 0.8rem;
+    width: 12.5rem;
+    height: 1.8rem
+}
+
+.formTextSmall{
+  margin-top:0px;
+  font-size:0.6rem;
+}
+
+.formTextSmall1{
+  margin-top:0px;
+  font-size:0.8rem;
+}
+
+.btnColor{
+  background-color: #6A60C0;
+  border-color: #6A60C0;
+}
+
+.btnColor:hover{
+  background-color: #6A60C0;
+  border-color: #6A60C0;
+}
+
+img{
+  width:100%;
+  height: 100%;
+}
+
+.azureIcon{
+  width:14px;
+  height:14px;
+}
+
+.btn-outline-secondary:hover{
+  background-color: #fff;
+  color:black;
+}
+
+.borderBottom{
+  width: 41px;
+  border-bottom: 3px solid #6A60C0;
+}
+
+.buttonGroup{
+  height: 165px;
+}
