@@ -1,120 +1,138 @@
-body, html { 
+html {
   height: 100%;
-  background: url(https://i.hizliresim.com/P1WaZO.jpg) no-repeat center center fixed; 
-  background-size: cover;
-  
 }
 
-.containerSize{
-  
-  height:360px;
+body {
+  /* height: 100%; */
+  background-image: url(https://i.hizliresim.com/ADMaM7.png);
+  background-size: 400px 320px;
 }
 
-.loginPageContainer{
-  box-shadow: 0px 14px 102px -23px rgba(0,0,0,1);
+.containerSize {
+  height: 360px;
+}
+
+.loginPageContainer {
+  box-shadow: 0px 0px 0.7px 0.1px rgba(0, 0, 0, 0.58);
   border-radius: 3px;
   overflow: hidden;
 }
 
-.leftSide{
-  background-color: #524C5F;
-  width:50px;
+.leftSide {
+  background-color: #524c5f;
+  width: 2.93rem;
 }
 
-.logoLeftSide{
-  width:3rem;
-  height:3rem;
+.logoLeftSide {
+  width: 2.55rem;
+    height: 2.55rem;
+    margin-top: 0.5rem;
+    margin-left: 0.15rem;
 }
 
-.rightSide{
-  
-  width:480px;
-  
+
+.rightSide {
+  width: 480px;
 }
 
-.card{
-  height:100%;
-  width:100%;
+.card {
+  height: 100%;
+  width: 100%;
 }
 
-.card-img-top{
-  width: 2.5rem;
-  height: 2.5rem;
+.card-img-top {
+  width: 2.75rem;
+  height: 2.75rem;
 }
 
-.mainLogoContainer{
-  height:135px;
-  width:100%;
+.mainLogoContainer {
+  height: 135px;
+  width: 100%;
 }
 
-.headerTitleSize{
-  font-size:1.1rem;
+.headerTitleSize {
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
-.formText{
-font-size:0.8em;
-font-weight: bold;
+.formText {
+  font-size: 0.8em;
+  font-weight: bold;
 }
 
-.formText1{
+.formText1 {
   width: 10.6rem;
   height: 1.8rem;
   font-size: 0.6rem;
   font-weight: 700;
   text-align: left;
   color: #494055;
-  
 }
 
-.formSize{
-  font-size: 0.8rem;
+.formSize {
+  font-size: 0.7rem;
     width: 12.5rem;
-    height: 1.9rem
+    height: 1.81rem;
 }
 
-.formTextSmall{
-  margin-top:0px;
-  font-size:0.6rem;
+.formTextSmall {
+  margin-top: 0px;
+  font-size: 0.6rem;
 }
 
-.formTextSmall1{
-  margin-top:0px;
-  font-size:0.8rem;
+.formTextSmall1 {
+  margin-top: 0px;
+  font-size: 0.8rem;
+  color:#91969a;
 }
 
-.btnColor{
-  background-color: #6A60C0;
-  border-color: #6A60C0;
-  font-size:0.75rem;
+.btnColor {
+  background-color: #6a60c0;
+  border-color: #6a60c0;
+  font-size: 0.65rem;
+  width: 3.6rem;
 }
 
-.btnColor:hover{
-  background-color: #6A60C0;
-  border-color: #6A60C0;
+.btnColor:hover {
+  background-color: #6a60c0;
+  border-color: #6a60c0;
 }
 
-
-.azureIcon{
-  width:14px;
+.azureIcon {
+  width: 14px;
   height: 14px;
 }
 
-.imgSize{
-  width:100%;
-  height:100%;
+.imgSize {
+  width: 100%;
+  height: 100%;
 }
 
-.btn-outline-secondary:hover{
+.btn-outline-secondary:hover {
   background-color: #fff;
-  color:black;
+  color: black;
 }
 
-.borderBottom{
+.borderBottom {
   width: 41px;
-  border-bottom: 3px solid #6A60C0;
+  border-bottom: 3px solid #6a60c0;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
-.buttonGroup{
+.buttonGroup {
   height: 165px;
+}
+
+.formGroupSize{
+  margin-bottom: 2.125rem;
+}
+
+.formGroupSize1{
+  margin-bottom:0.7rem;
+
+}
+
+.btn-outline-secondary{
+  border-color:#b9bec4;
 }
