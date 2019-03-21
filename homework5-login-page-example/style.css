@@ -145,6 +145,15 @@ body {
     padding-left: 0.5rem;
     align-items: center !important;
   }
+
+  .formGroupSize{
+    flex-direction: column;
+  } 
+
+  .btnColor{
+    width: 10.6rem;
+    margin-bottom:1em;
+  }
   
 }
 
