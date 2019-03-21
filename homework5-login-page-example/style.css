@@ -143,6 +143,7 @@ body {
 
   .buttonGroup{
     padding-left: 0.5rem;
+    align-items: center !important;
   }
   
 }
@@ -151,7 +152,6 @@ body {
 @media (min-width:769px){
   .buttonGroup{
     padding-left:1em;
-    align-items: center !important;
   }
 }
 
