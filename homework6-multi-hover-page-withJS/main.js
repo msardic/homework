@@ -6,7 +6,7 @@ return res.json();
 
 
  let text = "";
-returnData.multiHover.forEach(function(item,i){
+returnData.forEach(function(item,i){
 
 
 // text += "<div>" +
