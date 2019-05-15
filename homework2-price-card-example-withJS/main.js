@@ -67,7 +67,7 @@ text +=
 
 
 });
-document.getElementsByClassName("row my-5 mx-3")[0].innerHTML = text;
+document.getElementsByClassName("row")[0].innerHTML = text;
 
 
 
