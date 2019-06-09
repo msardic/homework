@@ -1,4 +1,4 @@
-fetch('http://api.openweathermap.org/data/2.5/weather?q=Istanbul,TR&appid=a7f8202996c8cae702b7a53aedf0057b&units=metric').then(function (res) {
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Istanbul,TR&appid=a7f8202996c8cae702b7a53aedf0057b&units=metric').then(function (res) {
 
   return res.json();
 
