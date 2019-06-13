@@ -4,60 +4,107 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Istanbul,TR&appid=a7f82
 
 }).then(function (returnData) {
 
- let weatherData = document.getElementsByClassName('row')[0];
-  
-    // weatherData.insertAdjacentHTML('beforeend', '<div>'+returnData.name+'</div>' );
+  let weatherData = document.getElementsByClassName('row')[0];
 
+  // weatherData.insertAdjacentHTML('beforeend', '<div>'+returnData.name+'</div>' );
 
-      let nowDate = new Date();
-      let HH = nowDate.getUTCHours();
-      let MM = nowDate.getUTCMinutes();
-      let gmtTime = HH*3600+MM*60;
-      let timeZone = returnData.timezone+gmtTime;
-      let HHMM = new Date(timeZone * 1000).toISOString().substr(11, 5);
+//gmt ye göre tarihi bulduran fonksiyon
+  function dateFunc() {
+    let nowDate = new Date();
+    let gmtTime = nowDate.getUTCHours() * 3600 + nowDate.getUTCMinutes() * 60;
+    let timeCard = returnData.timezone + gmtTime;
+    let HHMM = new Date(timeCard * 1000).toISOString().substr(11, 5);
+    return HHMM;
+  }
+
+  const sonuc = dateFunc();
+
+  //günün zamanlarını timezoneden çektiği bilgiye göre söyleyen fonksiyon
+  function myFunction() {
+
+    let nowDate = new Date();
+    let gmtTime = nowDate.getUTCHours() * 3600 + nowDate.getUTCMinutes() * 60;
+    let timeCard = returnData.timezone + gmtTime;
+
+    switch (true) {
+      case (timeCard >= 0 && timeCard < 21600):
+        partOfDay = "NIGHT";
+        break;
+      case (timeCard >= 21600 && timeCard < 46800):
+        partOfDay = "MORNING";
+        break;
+      case (timeCard >= 46800 && timeCard < 64800):
+        partOfDay = "AFTERNOON";
+        break;
+      case (timeCard >= 64800 && timeCard < 75600):
+        partOfDay = "EVENING";
+        break;
+      case (timeCard >= 75600 && timeCard < 86400):
+        partOfDay = "NIGHT";
+        break;
+      default:
+        partOfDay = "nope";
+        break;
+    }
+    return partOfDay;
+  }
+
+  const sonuc1 = myFunction();
+
+ 
+  //apiden gelen bilgiye göre ekrana ikon bastıran fonksiyon
+ 
+ 
+  function iconSelector() {
+    let ikon =  returnData.weather[0].icon; /*burada apide kullanılan arraya dikkat etmem lazım. */
       
-      // if (0<timeZone<21599 || 75600<timeZone<86400){
-      //   let partOfDay = "night"
-      //   }else if (21600<timeZone<46799){
-      //       let partOfDay = "morning"
-      //   }else if (46800<timeZone<64799){
-      //       let partOfDay = "afternoon"
-      //   }else if (64800<timeZone<75599){
-      //       let partOfDay = "evening"
-      //   }
-        
-    //   switch (timeZone) {
-    //     case (timeZone < 21600):
-    //         function myFunction() {
-    //             alert("night");
-    //         }
-    //         break;
-    //     case (timeZone < 46800):
-    //         function myFunction() {
-    //             alert("morning");
-    //         }
-    //         break;
-    //     case (timeZone < 64800):
-    //         function myFunction() {
-    //             alert("afternoon");
-    //         }
-    //         break;
-    //     case (timeZone < 75600):
-    //         function myFunction() {
-    //             alert("evening");
-    //         }
-    //         break;
-    //     case (timeZone < 86400):
-    //         function myFunction() {
-    //             alert("night");
-    //         }
-    //         break;
-    //     default:
-    //         alert("none");
-    //         break;
-    // }
+    switch (true) {
+      case (ikon == "01d"):
+        iconSelect = "wi-day-sunny";
+        break;
+      case (ikon == "01n"):
+        iconSelect = "wi-night-clear";
+        break;
+      case (ikon == "02d"):
+        iconSelect = "wi-day-cloudy";
+        break;
+      case (ikon == "02n"):
+        iconSelect = "wi-night-alt-cloudy";
+        break;
+      case (ikon == "03d" || ikon == "03n"):
+        iconSelect = "wi-cloud";
+        break;
+      case (ikon == "04d" || ikon == "04n"):
+        iconSelect = "wi-cloudy";
+        break;
+      case (ikon == "09d" || ikon == "09n"):
+        iconSelect = "wi-showers";
+        break;
+      case (ikon == "10d"):
+        iconSelect = "wi-day-showers";
+        break;
+      case (ikon == "10n"):
+        iconSelect = "wi-night-alt-showers";
+        break;
+      case (ikon == "11d" || ikon == "11n"):
+        iconSelect = "wi-thunderstorm";
+        break;
+      case (ikon == "11d" || ikon == "11n"):
+        iconSelect = "wi-thunderstorm";
+        break;
+      case (ikon == "13d" || ikon == "13n"):
+        iconSelect = "wi-snow";
+        break;
+      default:
+        iconSelect = "nope";
+        break;
+    }
+    return iconSelect;
+  }
 
+  const sonuc3 = iconSelector()
 
+//insert adjacent metoduyla ekrana basmak için kullanılan kodlar
   weatherData.insertAdjacentHTML('beforeend',
 
     '<div class="col-md-4 ">' +
@@ -70,7 +117,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Istanbul,TR&appid=a7f82
     '<div class="cityName mx-2">' + returnData.name + ' ─</div>' +
     '</div>' +
     '<div class="card-text d-flex">' +
-    '<div class="dayTime">NIGHT - '+HHMM+'</div>' +
+    '<div class="dayTime"> ' + sonuc1 + '  - ' + sonuc + '</div>' +
 
     '</div>' +
     '<div class="card-text temperature">' + returnData.main.temp.toString().substr(0, 2) + '°' + '</div>' +
@@ -80,7 +127,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Istanbul,TR&appid=a7f82
     '</div>' +
     '<div class="col">' +
     '<div class="d-flex justify-content-center align-items-center iconSizeBig h-100">' +
-    '<i class="wi wi-night-alt-snow-wind my-4"></i>' +
+    '<i class="wi '+sonuc3+' my-4"></i>' +
     '</div>' +
     '</div>' +
     '</div>' +
