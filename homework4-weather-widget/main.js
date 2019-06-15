@@ -8,10 +8,10 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Istanbul,TR&appid=a7f82
 
   // weatherData.insertAdjacentHTML('beforeend', '<div>'+returnData.name+'</div>' );
 
-//gmt ye göre tarihi bulduran fonksiyon
+  //gmt ye göre tarihi bulduran fonksiyon
   function dateFunc() {
     let nowDate = new Date();
-    let gmtTime = nowDate.getUTCHours() * 3600 + nowDate.getUTCMinutes() * 60;
+    let gmtTime = nowDate.getUTCHours() * 3600 + nowDate.getUTCMinutes() * 60 + nowDate.getUTCSeconds();
     let timeCard = returnData.timezone + gmtTime;
     let HHMM = new Date(timeCard * 1000).toISOString().substr(11, 5);
     return HHMM;
@@ -23,8 +23,9 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Istanbul,TR&appid=a7f82
   function myFunction() {
 
     let nowDate = new Date();
-    let gmtTime = nowDate.getUTCHours() * 3600 + nowDate.getUTCMinutes() * 60;
+    let gmtTime = nowDate.getUTCHours() * 3600 + nowDate.getUTCMinutes() * 60 + nowDate.getUTCSeconds();
     let timeCard = returnData.timezone + gmtTime;
+
 
     switch (true) {
       case (timeCard >= 0 && timeCard < 21600):
@@ -51,13 +52,13 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Istanbul,TR&appid=a7f82
 
   const sonuc1 = myFunction();
 
- 
+
   //apiden gelen bilgiye göre ekrana ikon bastıran fonksiyon
- 
- 
+
+
   function iconSelector() {
-    let ikon =  returnData.weather[0].icon; /*burada apide kullanılan arraya dikkat etmem lazım. */
-      
+    let ikon = returnData.weather[0].icon; /*burada apide kullanılan arraya dikkat etmem lazım. */
+
     switch (true) {
       case (ikon == "01d"):
         iconSelect = "wi-day-sunny";
@@ -89,9 +90,6 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Istanbul,TR&appid=a7f82
       case (ikon == "11d" || ikon == "11n"):
         iconSelect = "wi-thunderstorm";
         break;
-      case (ikon == "11d" || ikon == "11n"):
-        iconSelect = "wi-thunderstorm";
-        break;
       case (ikon == "13d" || ikon == "13n"):
         iconSelect = "wi-snow";
         break;
@@ -104,12 +102,60 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Istanbul,TR&appid=a7f82
 
   const sonuc3 = iconSelector()
 
-//insert adjacent metoduyla ekrana basmak için kullanılan kodlar
+  function backgroundSelector() {
+    let forBackground = returnData.weather[0].icon;
+
+    switch (true) {
+      case (forBackground == "01d"):
+        backgroundselect = "sunny";
+        break;
+      case (forBackground == "01n"):
+        backgroundselect = "nightSnowy";
+        break;
+      case (forBackground == "02d"):
+        backgroundselect = "cloudlyFull";
+        break;
+      case (forBackground == "02n"):
+        backgroundselect = "cloudlyNight";
+        break;
+      case (forBackground == "03d" || forBackground == "03n"):
+        backgroundselect = "cloudlyFull";
+        break;
+      case (forBackground == "04d" || forBackground == "04n"):
+        backgroundselect = "cloudlyFull";
+        break;
+      case (forBackground == "09d" || forBackground == "09n"):
+        backgroundselect = "mistyweather";
+        break;
+      case (forBackground == "10d"):
+        backgroundselect = "cloudlySun";
+        break;
+      case (forBackground == "10n"):
+        backgroundselect = "cloudlyNight";
+        break;
+      case (forBackground == "11d" || forBackground == "11n"):
+        backgroundselect = "cloudlyFull";
+        break;
+      case (forBackground == "13d" || forBackground == "13n"):
+        backgroundselect = "snowyWeather";
+        break;
+      default:
+        backgroundselect = "nope";
+        break;
+    }
+    return backgroundselect;
+  }
+
+  const sonuc4 = backgroundSelector()
+
+
+
+  //insert adjacent metoduyla ekrana basmak için kullanılan kodlar
   weatherData.insertAdjacentHTML('beforeend',
 
     '<div class="col-md-4 ">' +
     '<div class="card my-4 shadow border-0">' +
-    '<div class="card-body text-white nightSnowy">' +
+    '<div class="card-body text-white ' + sonuc4 + ' ">' +
     '<div class="row ">' +
     '<div class="col  ">' +
     ' <div class="card-text d-flex align-items-baseline">' +
@@ -127,7 +173,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Istanbul,TR&appid=a7f82
     '</div>' +
     '<div class="col">' +
     '<div class="d-flex justify-content-center align-items-center iconSizeBig h-100">' +
-    '<i class="wi '+sonuc3+' my-4"></i>' +
+    '<i class="wi ' + sonuc3 + ' my-4"></i>' +
     '</div>' +
     '</div>' +
     '</div>' +
