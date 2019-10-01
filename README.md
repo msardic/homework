@@ -11,7 +11,7 @@ Airbnb sayfasını bootstrap yardımıyla tasarlamaya çalıştım. Sayfa için 
 
 Fiyatlandırma için kullanılacak basit bir kart tasarımı. Sayfa için [tıklayınız.](https://msardic.github.io/homework/homework2-price-card-example/) 
 
- ==güncelleme==
+ **güncelleme**
 * veriler json dosyasından çekilerek yazdırıldı. Yeni link için [tıklayınız.](https://msardic.github.io/homework/homework2-price-card-example-withJS/) 
 
 
@@ -24,7 +24,7 @@ Sayfa için [tıklayınız.](https://msardic.github.io/homework/homework3-ecomme
 
 Hava durumu widget tasarımı. Sayfa için [tıklayınız.](https://msardic.github.io/homework/homework4-weather-widget/)
 
-==güncelleme ==
+**güncelleme**
 * openweather map api' i kullanarak istanbul için hava durumu tahminini widget'a ekledim.
 * UTC ye göre saat dilimini bulup, günün kısımlarını bu saat verisine göre ekrana yazdırdım.
 
@@ -39,7 +39,7 @@ Giriş sayfası tasarımı. Sayfa için [tıklayınız.](https://msardic.github.
 Çoklu hover animasyonu olan kart tasarımı. Sayfa için [tıklayınız.](https://msardic.github.io/homework/homework6-multi-hover-page/
 )
 
-==güncelleme==
+**güncelleme**
 * verileri javascripty yardımıyla json dosyasından çekip sayfaya yazdırdım. Görmek için [tıklayınız.](https://msardic.github.io/homework/homework6-multi-hover-page-withJS/
 )
 
