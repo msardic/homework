@@ -25,7 +25,7 @@ Sayfa için [tıklayınız.](https://msardic.github.io/homework/homework3-ecomme
 Hava durumu widget tasarımı. Sayfa için [tıklayınız.](https://msardic.github.io/homework/homework4-weather-widget/)
 
 **güncelleme**
-* openweather map api' i kullanarak istanbul için hava durumu tahminini widget'a ekledim.
+* openweather map api'i kullanarak istanbul için hava durumu tahminini widgeta ekledim.
 * UTC ye göre saat dilimini bulup, günün kısımlarını bu saat verisine göre ekrana yazdırdım.
 
 
@@ -40,7 +40,7 @@ Giriş sayfası tasarımı. Sayfa için [tıklayınız.](https://msardic.github.
 )
 
 **güncelleme**
-* verileri javascripty yardımıyla json dosyasından çekip sayfaya yazdırdım. Görmek için [tıklayınız.](https://msardic.github.io/homework/homework6-multi-hover-page-withJS/
+* verileri javascript yardımıyla json dosyasından çekip sayfaya yazdırdım. Görmek için [tıklayınız.](https://msardic.github.io/homework/homework6-multi-hover-page-withJS/
 )
 
 ## Dipnot
